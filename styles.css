@@ -1,0 +1,120 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #fef5e7;
+  background-image: url('assets/fondo-pantalla.jpg'); /* Fondo decorativo */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8); /* Fondo blanco transparente */
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Secciones */
+.section {
+  margin: 50px 0;
+  text-align: center;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #ff7e79;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para los títulos */
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Galería de fotos */
+.photo-text {
+  margin: 40px 0;
+  display: flex;
+  flex-wrap: wrap; /* Permite organizar muchas fotos */
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.photo-text img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.photo-text img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Stickers */
+.stickers {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.stickers img {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.3s;
+}
+
+.stickers img:hover {
+  transform: rotate(10deg) scale(1.2); /* Gira y agranda ligeramente al pasar el cursor */
+}
+
+/* Animaciones */
+.section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efecto de borde animado en la galería */
+.photo-text img {
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.photo-text img:hover {
+  border-color: #ff7e79;
+}
+
+/* Personalización de scroll */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff7e79; /* Color del scroll */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff3f3f; /* Color más oscuro al pasar el cursor */
+}
+
+::-webkit-scrollbar-track {
+  background: #ffe5e0; /* Fondo del scroll */
+}
