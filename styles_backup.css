@@ -62,42 +62,42 @@ body {
   overflow: hidden;
 }
 
-/* Stickers decorativos flotantes en esquina superior izquierda */
+/* Stickers decorativos flotantes en esquinas y costados */
 .page-content::before {
-  content: '💖    🦋\A\A  🌸    💝\A\A🌺    ✨';
+  content: '💖 🦋 💕 🌸 💝 🌺 ✨ 💖 🦋 💕 🌸 💝 🌺 ✨';
   position: absolute;
-  top: 15px;
-  left: 15px;
-  width: 80px;
-  height: 80px;
-  font-size: 16px;
+  top: 10px;
+  left: 10px;
+  width: 150px;
+  height: 150px;
+  font-size: 20px;
   opacity: 0.4;
   pointer-events: none;
   z-index: 1;
   animation: floatStickers 20s linear infinite;
-  letter-spacing: 0px;
-  line-height: 20px;
-  white-space: pre;
-  word-spacing: 0px;
+  letter-spacing: 15px;
+  line-height: 25px;
+  white-space: pre-wrap;
+  word-spacing: 10px;
 }
 
 /* Stickers en esquina superior derecha */
 .page-content::after {
-  content: '🌟    💖\A\A  💕    🌺\A\A✨    🦋';
+  content: '🌺 💖 🦋 💕 🌸 💝 ✨ 🌟 🌺 💖 🦋 💕 🌸 💝 ✨ 🌟';
   position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 80px;
-  height: 80px;
-  font-size: 16px;
+  top: 10px;
+  right: 10px;
+  width: 150px;
+  height: 150px;
+  font-size: 18px;
   opacity: 0.35;
   pointer-events: none;
   z-index: 1;
   animation: floatStickers 25s linear infinite reverse;
-  letter-spacing: 0px;
-  line-height: 20px;
-  white-space: pre;
-  word-spacing: 0px;
+  letter-spacing: 12px;
+  line-height: 22px;
+  white-space: pre-wrap;
+  word-spacing: 8px;
 }
 
 /* Animación de stickers flotantes */
@@ -119,12 +119,51 @@ body {
   }
 }
 
+/* Stickers adicionales en esquinas para cada tipo de página */
+.page:nth-child(even) .page-content::before {
+  content: '💝 🌸 💖 🦋 💕 🌺 💝 🌸 💖 🦋 💕 🌺 💝 🌸 💖 🦋';
+  animation-duration: 25s;
+  animation-direction: reverse;
+  opacity: 0.35;
+}
+
+.page:nth-child(3n) .page-content::before {
+  content: '🌸 💖 🦋 💝 🌺 💕 🌸 💖 🦋 💝 🌺 💕 🌸 💖 🦋 💝';
+  animation-duration: 18s;
+  font-size: 20px;
+  opacity: 0.45;
+}
+
+.page:nth-child(4n) .page-content::before {
+  content: '🦋 💕 🌸 💖 🌺 💝 🦋 💕 🌸 💖 🌺 💝 🦋 💕 🌸 💖';
+  animation-duration: 22s;
+  animation-direction: alternate;
+  opacity: 0.4;
+}
+
 /* Portada y contratapa sin stickers (más elegantes) */
 .cover .page-content::before,
 .cover .page-content::after,
 .back-cover .page-content::before,
 .back-cover .page-content::after {
   content: '';
+}
+
+/* Stickers especiales para algunas páginas */
+.page:nth-child(5n) .page-content::before {
+  content: '💖 💖 🌸 🦋 💕 💕 🌺 💝 💖 💖 🌸 🦋 💕 💕 🌺 💝';
+  animation-duration: 30s;
+  font-size: 22px;
+  opacity: 0.38;
+}
+
+/* Corazones flotantes adicionales para ciertas páginas */
+.page:nth-child(7n) .page-content::before {
+  content: '💖 ❤️ 💕 💝 💖 ❤️ 💕 💝 💖 ❤️ 💕 💝 💖 ❤️ 💕 💝';
+  animation-duration: 35s;
+  font-size: 18px;
+  opacity: 0.5;
+  animation-direction: reverse;
 }
 
 /* Portada */
@@ -210,227 +249,227 @@ body {
 
 /* Stickers adicionales en esquinas inferiores para páginas pares */
 .page:nth-child(even)::before {
-  content: '💝    🌸\A\A  💖    🦋\A\A💕    🌺';
+  content: '💝 🌸 💖 🦋 💕 🌺 ✨ 🌟 💝 🌸 💖 🦋 💕 🌺 ✨ 🌟';
   position: absolute;
-  bottom: 15px;
-  left: 15px;
-  width: 80px;
-  height: 80px;
-  font-size: 15px;
+  bottom: 10px;
+  left: 10px;
+  width: 140px;
+  height: 140px;
+  font-size: 16px;
   opacity: 0.45;
   pointer-events: none;
   z-index: 1;
   animation: floatStickers 30s linear infinite;
-  letter-spacing: 0px;
-  line-height: 18px;
-  white-space: pre;
-  word-spacing: 0px;
+  letter-spacing: 10px;
+  line-height: 20px;
+  white-space: pre-wrap;
+  word-spacing: 8px;
 }
 
 .page:nth-child(even)::after {
-  content: '✨    🌟\A\A  🌙    💖\A\A🦋    💕';
+  content: '🌸 💖 🦋 💝 🌺 💕 ✨ 🌟 🌙 🌸 💖 🦋 💝 🌺 💕 ✨';
   position: absolute;
-  bottom: 15px;
-  right: 15px;
-  width: 80px;
-  height: 80px;
-  font-size: 15px;
+  bottom: 10px;
+  right: 10px;
+  width: 140px;
+  height: 140px;
+  font-size: 17px;
   opacity: 0.4;
   pointer-events: none;
   z-index: 1;
   animation: floatStickers 22s linear infinite reverse;
-  letter-spacing: 0px;
-  line-height: 18px;
-  white-space: pre;
-  word-spacing: 0px;
+  letter-spacing: 11px;
+  line-height: 21px;
+  white-space: pre-wrap;
+  word-spacing: 9px;
 }
 
 /* Stickers en costado izquierdo para páginas cada 3 */
 .page:nth-child(3n)::before {
-  content: '🦋\A\A\A💖\A\A\A🌸\A\A\A💝\A\A\A🌺';
+  content: '🦋\A💖\A🌸\A💝\A🌺\A💕\A✨\A🌟\A🦋\A💖\A🌸\A💝';
   position: absolute;
-  left: 10px;
+  left: 5px;
   top: 50%;
   transform: translateY(-50%);
-  width: 25px;
-  height: 200px;
-  font-size: 16px;
+  width: 30px;
+  height: 300px;
+  font-size: 22px;
   opacity: 0.35;
   pointer-events: none;
   z-index: 1;
   animation: floatStickers 18s linear infinite;
   letter-spacing: 0px;
-  line-height: 40px;
+  line-height: 25px;
   white-space: pre;
 }
 
 /* Stickers en costado derecho para páginas cada 3 */
 .page:nth-child(3n)::after {
-  content: '💕\A\A\A✨\A\A\A🌟\A\A\A💝\A\A\A🦋';
+  content: '💝\A🌺\A💖\A🦋\A🌸\A💕\A✨\A🌟\A💝\A🌺\A💖\A🦋';
   position: absolute;
-  right: 10px;
+  right: 5px;
   top: 50%;
   transform: translateY(-50%);
-  width: 25px;
-  height: 200px;
-  font-size: 16px;
+  width: 30px;
+  height: 300px;
+  font-size: 20px;
   opacity: 0.4;
   pointer-events: none;
   z-index: 1;
   animation: floatStickers 24s linear infinite reverse;
   letter-spacing: 0px;
-  line-height: 40px;
+  line-height: 25px;
   white-space: pre;
 }
 
 /* Stickers especiales para páginas cada 4 - esquinas superiores */
 .page:nth-child(4n)::before {
-  content: '💖      ❤️      💕      💝      🌹';
+  content: '💖 ❤️ 💕 💝 🌹 💖 ❤️ 💕 💝 🌹 💖 ❤️ 💕 💝 🌹';
   position: absolute;
-  top: 10px;
+  top: 5px;
   left: 50%;
   transform: translateX(-50%);
-  width: 350px;
-  height: 25px;
-  font-size: 14px;
+  width: 300px;
+  height: 30px;
+  font-size: 18px;
   opacity: 0.38;
   pointer-events: none;
   z-index: 1;
   animation: floatStickers 35s linear infinite;
-  letter-spacing: 0px;
-  line-height: 25px;
+  letter-spacing: 12px;
+  line-height: 30px;
   white-space: nowrap;
-  word-spacing: 0px;
+  word-spacing: 8px;
 }
 
 /* Stickers especiales para páginas cada 4 - esquinas inferiores */
 .page:nth-child(4n)::after {
-  content: '🌺      🌸      🌼      🌻      💐';
+  content: '🌺 🌸 🌼 🌻 💐 🌺 🌸 🌼 🌻 💐 🌺 🌸 🌼 🌻 💐';
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
-  width: 350px;
-  height: 25px;
-  font-size: 14px;
+  width: 300px;
+  height: 30px;
+  font-size: 16px;
   opacity: 0.42;
   pointer-events: none;
   z-index: 1;
   animation: floatStickers 28s linear infinite reverse;
-  letter-spacing: 0px;
-  line-height: 25px;
+  letter-spacing: 15px;
+  line-height: 30px;
   white-space: nowrap;
-  word-spacing: 0px;
+  word-spacing: 10px;
 }
 
 /* Stickers corazones flotantes para páginas cada 5 */
 .page:nth-child(5n)::before {
-  content: '💖  ❤️\A\A💕  💓\A\A💗';
+  content: '💖 ❤️ 💕 💓 💗 💖 ❤️ 💕 💓 💗 💖 ❤️ 💕 💓 💗';
   position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 60px;
-  height: 60px;
-  font-size: 13px;
+  top: 15px;
+  left: 15px;
+  width: 120px;
+  height: 120px;
+  font-size: 14px;
   opacity: 0.5;
   pointer-events: none;
   z-index: 1;
   animation: floatStickers 32s linear infinite;
-  letter-spacing: 0px;
-  line-height: 16px;
-  white-space: pre;
-  word-spacing: 0px;
+  letter-spacing: 8px;
+  line-height: 18px;
+  white-space: pre-wrap;
+  word-spacing: 6px;
 }
 
 .page:nth-child(5n)::after {
-  content: '💓  💗\A\A💖  ❤️\A\A💕';
+  content: '💓 💗 💖 ❤️ 💕 💓 💗 💖 ❤️ 💕 💓 💗 💖 ❤️ 💕';
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  font-size: 13px;
+  bottom: 15px;
+  right: 15px;
+  width: 120px;
+  height: 120px;
+  font-size: 15px;
   opacity: 0.45;
   pointer-events: none;
   z-index: 1;
   animation: floatStickers 26s linear infinite reverse;
-  letter-spacing: 0px;
-  line-height: 16px;
-  white-space: pre;
-  word-spacing: 0px;
+  letter-spacing: 9px;
+  line-height: 19px;
+  white-space: pre-wrap;
+  word-spacing: 7px;
 }
 
 /* Mariposas y flores para páginas cada 7 */
 .page:nth-child(7n)::before {
-  content: '🦋  🌸\A\A🦋  🌺\A\A🦋  🌼';
+  content: '🦋 🌸 🦋 🌺 🦋 🌼 🦋 🌻 🦋 🌸 🦋 🌺 🦋 🌼 🦋';
   position: absolute;
-  top: 25px;
-  right: 25px;
-  width: 50px;
-  height: 50px;
-  font-size: 14px;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  font-size: 16px;
   opacity: 0.4;
   pointer-events: none;
   z-index: 1;
   animation: floatStickers 40s linear infinite;
-  letter-spacing: 0px;
-  line-height: 14px;
-  white-space: pre;
-  word-spacing: 0px;
+  letter-spacing: 6px;
+  line-height: 16px;
+  white-space: pre-wrap;
+  word-spacing: 4px;
 }
 
 .page:nth-child(7n)::after {
-  content: '🌸  🦋\A\A🌺  🦋\A\A🌻  🦋';
+  content: '🌸 🦋 🌺 🦋 🌼 🦋 🌻 🦋 🌸 🦋 🌺 🦋 🌼 🦋 🌻';
   position: absolute;
-  bottom: 25px;
-  left: 25px;
-  width: 50px;
-  height: 50px;
-  font-size: 14px;
+  bottom: 20px;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+  font-size: 17px;
   opacity: 0.43;
   pointer-events: none;
   z-index: 1;
   animation: floatStickers 33s linear infinite reverse;
-  letter-spacing: 0px;
-  line-height: 14px;
-  white-space: pre;
-  word-spacing: 0px;
+  letter-spacing: 7px;
+  line-height: 17px;
+  white-space: pre-wrap;
+  word-spacing: 5px;
 }
 
 /* Estrellas y brillos para páginas cada 6 */
 .page:nth-child(6n)::before {
-  content: '✨\A\A\A🌟\A\A\A⭐\A\A\A💫';
+  content: '✨ 🌟 ⭐ 💫 ✨ 🌟 ⭐ 💫 ✨ 🌟 ⭐ 💫 ✨ 🌟 ⭐';
   position: absolute;
-  left: 8px;
+  left: 5px;
   bottom: 50%;
   transform: translateY(50%);
-  width: 20px;
-  height: 120px;
-  font-size: 14px;
+  width: 25px;
+  height: 200px;
+  font-size: 18px;
   opacity: 0.37;
   pointer-events: none;
   z-index: 1;
   animation: floatStickers 45s linear infinite;
   letter-spacing: 0px;
-  line-height: 30px;
+  line-height: 20px;
   white-space: pre;
 }
 
 .page:nth-child(6n)::after {
-  content: '🌟\A\A\A✨\A\A\A💫\A\A\A⭐';
+  content: '🌟 ✨ 💫 ⭐ 🌟 ✨ 💫 ⭐ 🌟 ✨ 💫 ⭐ 🌟 ✨ 💫';
   position: absolute;
-  right: 8px;
+  right: 5px;
   bottom: 50%;
   transform: translateY(50%);
-  width: 20px;
-  height: 120px;
-  font-size: 14px;
+  width: 25px;
+  height: 200px;
+  font-size: 19px;
   opacity: 0.41;
   pointer-events: none;
   z-index: 1;
   animation: floatStickers 37s linear infinite reverse;
   letter-spacing: 0px;
-  line-height: 30px;
+  line-height: 22px;
   white-space: pre;
 }
 
