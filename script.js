@@ -1,8 +1,36 @@
 // Control de la música
 document.addEventListener('DOMContentLoaded', () => {
   const audio = document.getElementById('birthday-song');
-  if (audio) {
+  const musicToggle = document.getElementById('musicToggle');
+  
+  if (audio && musicToggle) {
     audio.volume = 0.20;
+    let isPlaying = false;
+    
+    musicToggle.addEventListener('click', () => {
+      if (isPlaying) {
+        audio.pause();
+        musicToggle.textContent = '🎵 Reproducir Música';
+        musicToggle.classList.remove('playing');
+        isPlaying = false;
+      } else {
+        audio.play().then(() => {
+          musicToggle.textContent = '⏸️ Pausar Música';
+          musicToggle.classList.add('playing');
+          isPlaying = true;
+        }).catch(e => {
+          console.log('Error reproduciendo música:', e);
+          alert('No se pudo reproducir la música. Verifica que el archivo existe.');
+        });
+      }
+    });
+    
+    // Mostrar una notificación amigable
+    setTimeout(() => {
+      if (!isPlaying) {
+        musicToggle.style.animation = 'musicPulse 1.5s ease-in-out 3';
+      }
+    }, 2000);
   }
 });
 
